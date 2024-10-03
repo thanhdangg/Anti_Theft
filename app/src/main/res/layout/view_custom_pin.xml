@@ -1,0 +1,123 @@
+<!-- res/layout/view_custom_pin.xml -->
+<LinearLayout
+    android:id="@+id/pinViewContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_your_pin_code_to_unlock"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        >
+    </TextView>
+
+    <!-- Pincode Indicator Circles -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <View
+            android:id="@+id/circle1"
+            style="@style/PinCircle"/>
+        <View
+            android:id="@+id/circle2"
+            style="@style/PinCircle"/>
+        <View
+            android:id="@+id/circle3"
+            style="@style/PinCircle"/>
+        <View
+            android:id="@+id/circle4"
+            style="@style/PinCircle"/>
+    </LinearLayout>
+
+    <!-- Pincode Grid Keyboard -->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:layout_marginTop="32dp">
+
+        <!-- Buttons -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn1"
+            style="@style/PinButton"
+            android:text="1"
+            tools:ignore="HardcodedText"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn2"
+            style="@style/PinButton"
+            android:text="2"
+            tools:ignore="HardcodedText"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn3"
+            style="@style/PinButton"
+            android:text="3"
+            tools:ignore="HardcodedText"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn4"
+            style="@style/PinButton"
+            android:text="4"
+            tools:ignore="HardcodedText"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn5"
+            style="@style/PinButton"
+            android:text="5"
+            tools:ignore="HardcodedText"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn6"
+            style="@style/PinButton"
+            android:text="6"
+            tools:ignore="HardcodedText"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn7"
+            style="@style/PinButton"
+            android:text="7"
+            tools:ignore="HardcodedText"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn8"
+            style="@style/PinButton"
+            android:text="8"
+            tools:ignore="HardcodedText"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn9"
+            style="@style/PinButton"
+            android:text="9"
+            tools:ignore="HardcodedText"/>
+
+        <Space
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn0"
+            style="@style/PinButton"
+            android:text="0"
+            tools:ignore="HardcodedText"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnDelete"
+            android:text="Delete"
+            tools:ignore="HardcodedText"
+            android:textSize="20sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            />
+
+    </GridLayout>
+</LinearLayout>

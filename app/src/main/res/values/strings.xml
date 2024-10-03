@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Anti Theft</string>
+    <string name="motion_detection">Motion Detection</string>
+    <string name="motion_detection_description">Activate alarm on movement</string>
+    <string name="power">Power Detection</string>
+    <string name="pocker">Pocker Detection</string>
+    <string name="headset">Headset Detection</string>
+    <string name="activate_alrm_when_charger_is_unpluged">Activate alrm when charger is unpluged</string>
+    <string name="activate_alarm_if_devices_is_removed_from_pocket">Activate alarm if devices is removed from pocket</string>
+    <string name="activate_alarm_if_headset_is_unplugged">Activate alarm if headset is unplugged</string>
+    <string name="delete">Delete</string>
+    <string name="enter_your_pin_code_to_unlock">Enter your pin code to unlock</string>
 </resources>

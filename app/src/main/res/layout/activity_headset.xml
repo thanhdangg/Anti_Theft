@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.headset.ActivityHeadset"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/ivHeadset"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/headphone"
+        android:background="@color/black"
+        android:visibility="visible"
+        >
+    </ImageView>
+
+    <com.example.antitheft.utils.CustomPinView
+        android:id="@+id/pinView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        >
+    </com.example.antitheft.utils.CustomPinView>
+</LinearLayout>

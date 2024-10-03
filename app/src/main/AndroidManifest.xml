@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +18,25 @@
         android:theme="@style/Theme.AntiTheft"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.entry_pin.ActivityPinEntry"
+            android:exported="false" />
+        <activity
+            android:name=".ui.setting.ActivitySetting"
+            android:exported="false" />
+        <activity
+            android:name=".ui.power.ActivityPower"
+            android:exported="false" />
+        <activity
+            android:name=".ui.headset.ActivityHeadset"
+            android:exported="false" />
+        <activity
+            android:name=".ui.pocket.ActivityPocket"
+            android:exported="false" />
+        <activity
+            android:name=".ui.motion.ActivityMotion"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +44,48 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".service.MotionSensorService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.example.antitheft.service.MotionSensorService" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".service.ChargerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"
+            >
+            <intent-filter>
+                <action android:name="com.example.antitheft.service.ChargerService" />
+            </intent-filter>
+        </service>
+        <service android:name=".service.HeadsetService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"
+            >
+            <intent-filter>
+                <action android:name="com.example.antitheft.service.HeadsetService" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".receiver.PowerDisconnectReceiver"
+            android:exported="false"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiver.HeadsetReceiver"
+            android:exported="false"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.HEADSET_PLUG" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
